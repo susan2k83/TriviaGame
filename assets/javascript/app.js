@@ -1,14 +1,16 @@
 $(document).ready(function() {
-// You'll create a trivia form with multiple choice or true/false options (your choice).
-
-// When the start button is clicked  
+ $(".slidingDiv").hide();
+ // $(".slidingDiv").show();
    
-$("#startCounter").on("click", function(){
+$("#startCounter, .show_hide").on("click", function(){
 
+ 
 // new page/box/triviaQuestions opens showing trivia qeustions
 $("#startCounter").hide();
+$(".slidingDiv").show();
 
-     var count = 90;
+
+     var count = 30;
      var counter = setInterval(function() {
      count--;
              

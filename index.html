@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Trivia Game</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-<h1>Totally Trivial Trivia!</h1>
-
-
-<div id="">
-	<button type="button" id="startCounter">Start</button>
-</div>
-
- <div id="triviaPage">
-   <div id="triviaQuestions">
-   	 <h2 id="timeRemaining">Time Remaining: <span class="timeRemaining"> 90 </span>seconds</h2>
-   	 <p id="question1">Q1</p>
-   	 <p id="qOneAnswerChoices">A B C D</p>
-   	 <p id="question2">Q2</p>
-   	 <p id="qTwoAnswerChoices">A B C D</p>
-   	 <p id="question3">Q3</p>
-   	 <p id="qThreeAnswersChoices">A B C D</p>
-   	 <p id="question4">Q4</p>
-   	 <p id="qFourAnswerChoices">A B C D</p>
-   </div>
- </div>
-
- 
-<div id="endOfGame">
-
-   <h2 id="gameOver">Game Over!</h2>
-
-   <p id="correct">Correct Answers: <span class="correctAnswers"></span></p>
-
-   <p id="incorret">Incorrect Answers: <span class="incorretAnswers"></span></p>
-
-   <p id="unaswered">Unaswered: <span class="unanswered"></span></p>
-
-</div>
-
-
-
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/javascript/app.js"></script>
+    <h1>Totally Trivial Trivia!</h1>
+    <div id="">
+        <button type="button" id="startCounter"><a href="#" class="show_hide">Start</a></button>
+    </div>
+    <div id="triviaPage">
+        <div id="countdownSection">
+            <h2 id="timeRemaining">Time Remaining: <span class="timeRemaining"> 30  </span> seconds</h2>
+        </div>
+        <div id="triviaQuestions" class="slidingDiv">
+            <p id="question1">In humans, what is the only internal organ capable of regenerating lost tissue?
+                <br />
+                <input type="radio" name="genre" value="liver" /> Liver
+                <input type="radio" name="genre" value="brain" /> Brain
+                <input type="radio" name="genre" value="heart" /> Heart
+                <input type="radio" name="genre" value="intestine" /> Intestine
+            </p>
+            <p id="question2">What is the name for the trees
+            that never lose their leaves?
+                <br />
+                <input type="radio" name="genre" value="deciduous" /> Deciduous
+                <input type="radio" name="genre" value="seasonal" /> Seasonal
+                <input type="radio" name="genre" value="evergreen" /> Evergreen
+                <input type="radio" name="genre" value="annual" /> Annual
+            </p>
+            <p id="question3">Approximately 2% of all people have what eye color?
+                <br />
+                <input type="radio" name="genre" value="amber" /> Amber
+                <input type="radio" name="genre" value="green" /> Green
+                <input type="radio" name="genre" value="blue" /> Blue
+                <input type="radio" name="genre" value="hazel" /> Hazel
+            </p>
+            <p id="question4">What is the most abundant metal in the earth's crust
+                <br />
+                <input type="radio" name="genre" value="aluminum" /> Aluminium
+                <input type="radio" name="genre" value="iron" /> Iron
+                <input type="radio" name="genre" value="titanium" /> Titanium
+                <input type="radio" name="genre" value="tungsten" /> Tungsten
+            </p>
+        </div>
+    </div>
+    <div id="endOfGame">
+        <h2 id="gameOver">Game Over!</h2>
+        <p id="correct">Correct Answers: <span class="correctAnswers"></span></p>
+        <p id="incorret">Incorrect Answers: <span class="incorretAnswers"></span></p>
+        <p id="unaswered">Unaswered: <span class="unanswered"></span></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
