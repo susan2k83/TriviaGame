@@ -1,6 +1,19 @@
-body {
-	background-color: #ffa700 radial gradient; 
+html {
+	
+  /*background-color: #333;*/
+  /*background-color: #ffa700 radial gradient; */
+ /*}*/
 }
+body {
+	background-color: #ffa700;
+  /*background-color: #fff;*/
+  width: 750px;
+  margin: 0 auto;
+}
+
+	/*background-color: #ffa700 radial gradient; */
+/*}*/
+
 #time-remaining {
 	width: 300px;
 	height: 50px;
@@ -15,6 +28,9 @@ body {
 	border-radius: 4px;
 	background-color: #80bfff;	
 	box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+a {
+	text-decoration: none;
 }
 .slidingDiv {
 	width: 525px;

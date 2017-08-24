@@ -1,28 +1,94 @@
 $(document).ready(function() {
- $(".slidingDiv").hide();
- // $(".slidingDiv").show();
-   
-$("#startCounter, .show_hide").on("click", function(){
+    $(".slidingDiv").hide();
+    // $(".slidingDiv")'.show();
 
- 
-// new page/box/triviaQuestions opens showing trivia qeustions
-$("#startCounter").hide();
-$(".slidingDiv").show();
+    $("#startCounter, .show_hide").on("click", function() {
 
 
-     var count = 30;
-     var counter = setInterval(function() {
-     count--;
-             
-     $(".timeRemaining").html(count);
-     console.log(counter);
+        // new page/box/triviaQuestions opens showing trivia qeustions
+        $("#startCounter").hide();
+        $(".slidingDiv").show();
+        var unansweredTotal = 0;
+        var incorrectTotal = 0;
+        var correctAnswerTotal = 0;
+        var count = 5;
+        var counter = setInterval(function() {
+            count--;
 
-       if (count === 0) {
-      clearInterval(counter);
-    } 
-   }, 1000);
-  
-  });
+            $(".timeRemaining").html(count);
+            console.log(counter);
+
+            if (count === 0) {
+                clearInterval(counter);
+                //do tallies for correct/incorrect/unanswered
+
+                var userChoiceForGenre = $("input[name='genre']:checked").val();
+                var correctAnswerForGenre = 'liver';
+
+                if (userChoiceForGenre === correctAnswerForGenre) {
+                    correctAnswerTotal++;
+                    console.log(correctAnswerTotal);
+                } else if (userChoiceForGenre !== undefined && userChoiceForGenre !== correctAnswerForGenre) {
+                    incorrectTotal++;
+                    console.log(incorrectTotal);
+                } else {
+                    unansweredTotal++;
+                    console.log(unansweredTotal);
+                }
+
+                var userChoiceForGenre = $("input[name='nature']:checked").val();
+                var correctAnswerForGenre = 'evergreen';
+
+                if (userChoiceForGenre === correctAnswerForGenre) {
+                    correctAnswerTotal++;
+                    console.log(correctAnswerTotal);
+
+                } else if (userChoiceForGenre !== undefined && userChoiceForGenre !== correctAnswerForGenre) {
+                    incorrectTotal++;
+                    console.log(incorrectTotal);
+                } else {
+                    unansweredTotal++;
+                    console.log(unansweredTotal);
+                }
+
+                var userChoiceForGenre = $("input[name='eyes']:checked").val();
+                var correctAnswerForGenre = 'green';
+
+                if (userChoiceForGenre === correctAnswerForGenre) {
+                    correctAnswerTotal++;
+                    console.log(correctAnswerTotal);
+
+                } else if (userChoiceForGenre !== undefined && userChoiceForGenre !== correctAnswerForGenre) {
+                    incorrectTotal++;
+                    console.log(incorrectTotal);
+                } else {
+                    unansweredTotal++;
+                    console.log(unansweredTotal);
+                }
+
+                var userChoiceForGenre = $("input[name='metal']:checked").val();
+                var correctAnswerForGenre = 'aluminum';
+
+                if (userChoiceForGenre === correctAnswerForGenre) {
+                    correctAnswerTotal++;
+                    console.log(correctAnswerTotal);
+
+                } else if (userChoiceForGenre !== undefined && userChoiceForGenre !== correctAnswerForGenre) {
+                    incorrectTotal++;
+                    console.log(incorrectTotal);
+                } else {
+                    unansweredTotal++;
+                    console.log(unansweredTotal);
+                }
+
+                $(".correctAnswers").text(correctAnswerTotal);
+                $(".incorretAnswers").text(incorrectTotal);
+                $(".unanswered").text(unansweredTotal);
+
+            }
+        }, 1000);
+
+    });
 });
 
 // a new page loads ( how is this done? Do I need a link to a new html page? or, 'hide' the content?
@@ -39,7 +105,7 @@ $(".slidingDiv").show();
 
 //There are four questions
 
- // Each question has four answer choices
+// Each question has four answer choices
 
 // User can only choose one question
 
@@ -58,5 +124,4 @@ $(".slidingDiv").show();
 
 // calculate the number of unaswered answers
 
-// user can only pick one answer 
-
+// user can only pick one answer
