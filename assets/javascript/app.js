@@ -1,21 +1,27 @@
+$(document).ready(function() {
 // You'll create a trivia form with multiple choice or true/false options (your choice).
 
 // When the start button is clicked  
-var counter = 90
+   
 $("#startCounter").on("click", function(){
+
 // new page/box/triviaQuestions opens showing trivia qeustions
 $("#startCounter").hide();
-  setInterval(function() {
-    counter--;
-    if (counter >=0){
-      $(".timeRemaining").html();
-    }
-    if (counter === 0) {
+
+     var count = 90;
+     var counter = setInterval(function() {
+     count--;
+             
+     $(".timeRemaining").html(count);
+     console.log(counter);
+
+       if (count === 0) {
       clearInterval(counter);
     } 
    }, 1000);
   
   });
+});
 
 // a new page loads ( how is this done? Do I need a link to a new html page? or, 'hide' the content?
 
