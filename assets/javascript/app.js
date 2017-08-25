@@ -1,17 +1,15 @@
 $(document).ready(function() {
     $(".slidingDiv").hide();
     // $(".slidingDiv")'.show();
-
+    $("#endOfGame").hide();
     $("#startCounter, .show_hide").on("click", function() {
 
-
-        // new page/box/triviaQuestions opens showing trivia qeustions
         $("#startCounter").hide();
         $(".slidingDiv").show();
         var unansweredTotal = 0;
         var incorrectTotal = 0;
         var correctAnswerTotal = 0;
-        var count = 5;
+        var count = 30;
         var counter = setInterval(function() {
             count--;
 
@@ -80,7 +78,7 @@ $(document).ready(function() {
                     unansweredTotal++;
                     console.log(unansweredTotal);
                 }
-
+                $("#endOfGame").show();
                 $(".correctAnswers").text(correctAnswerTotal);
                 $(".incorretAnswers").text(incorrectTotal);
                 $(".unanswered").text(unansweredTotal);
